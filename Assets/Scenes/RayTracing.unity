@@ -373,7 +373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.13359281, y: -0, z: -0, w: 0.99103636}
-  m_LocalPosition: {x: 0.66, y: 5.52, z: 99.12}
+  m_LocalPosition: {x: -0.09, y: 5.52, z: 99.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -395,6 +395,11 @@ MonoBehaviour:
   skybox: {fileID: 2800000, guid: 340f79b3083a94843ac4ecf7593117eb, type: 3}
   DirectionalLight: {fileID: 705507994}
   SphereSeed: 54314213
+  _IOR: 2.83
+  _AbsorbIntensity: 2.89
+  _ColorAdd: 0.05
+  _ColorMultiply: 1.96
+  _Specular: 0.472
   SphereRadius: {x: 5, y: 15}
   SphereMax: 10000
   SpherePlacementRadius: 100
@@ -418,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smothness: 1
   albedo: {r: 0, g: 0, b: 0, a: 0}
-  specular: {r: 0.9843137, g: 0.8980392, b: 0.33333334, a: 0}
+  specular: {r: 0.6132076, g: 0.26321647, b: 0.26321647, a: 0}
   emission: {r: 0.245, g: 0.2191057, b: 0.073699206, a: 0}
 --- !u!1 &1602248377 stripped
 GameObject:
@@ -453,6 +458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rubbish (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f1aeea374600e1e4e850489c4d4d1da1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f1aeea374600e1e4e850489c4d4d1da1,
         type: 3}

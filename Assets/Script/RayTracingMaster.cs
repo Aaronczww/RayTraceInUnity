@@ -26,7 +26,12 @@ public class RayTracingMaster : MonoBehaviour
     private static bool _meshObjectsNeedRebuilding = false;
 
     private static List<RayTracingObject> _rayTracingObjects = new List<RayTracingObject>();
-
+    
+    public float _IOR = 2.83f;
+    public float _AbsorbIntensity = 2.89f;
+    public float _ColorAdd = 0.05f;
+    public float _ColorMultiply = 1.96f;
+    public float _Specular = 0.472f;
     struct Sphere
     {
         public Vector3 position;
@@ -144,6 +149,14 @@ public class RayTracingMaster : MonoBehaviour
         RayTracingShader.SetMatrix("_CameraToWorld", _camera.cameraToWorldMatrix);
         RayTracingShader.SetMatrix("_CameraInverseProjection", _camera.projectionMatrix.inverse);
         RayTracingShader.SetFloat("_Seed", Random.value);
+        RayTracingShader.SetFloat("_IOR", _IOR);
+
+        RayTracingShader.SetFloat("_ColorAdd", _ColorAdd);
+        RayTracingShader.SetFloat("_AbsorbIntensity", _AbsorbIntensity);
+        RayTracingShader.SetFloat("_ColorMultiply", _ColorMultiply);
+        RayTracingShader.SetFloat("_Specular", _Specular);
+
+
         //RayTracingShader.SetInt("alpha", alpha);
         Vector3 l = DirectionalLight.transform.forward;
         RayTracingShader.SetVector("_DirectionalLight", new Vector4(l.x, l.y, l.z, DirectionalLight.intensity));
